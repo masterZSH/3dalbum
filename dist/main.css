@@ -1,0 +1,73 @@
+body {
+    background: #111111;
+    perspective: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.album {
+    height: 360px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.album img {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    box-shadow: 0 0 2px black;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+
+.home {
+    position: absolute;
+    z-index: 300;
+    display: flex;
+    width: 3.5em;
+    height: 3.5em;
+    border: 3px solid transparent;
+    border-top-color: #c83cff;
+    border-bottom-color: #c83cff;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+.home:before {
+    content: ' ';
+    display: block;
+    margin: auto;
+    width: 0.75em;
+    height: 0.75em;
+    color: #c83cff;
+    border: 3px solid #c83cff;
+    border-radius: 50%;
+    animation: pulse 1s alternate ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(0.8);
+    }
+}
