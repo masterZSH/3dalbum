@@ -42,6 +42,7 @@ body {
     border-bottom-color: #c83cff;
     border-radius: 50%;
     animation: spin 1.5s linear infinite;
+    cursor: pointer;
 }
 
 .home:before {
